@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mkbank.app.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_branches"
+        android:name="com.example.mkbank.app.branches.BranchesFragment"
+        android:label="@string/menu_branches"
+        tools:layout="@layout/fragment_branches"/>
+
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.example.mkbank.app.news.NewsFragment"
+        android:label="@string/menu_news"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+        android:id="@+id/nav_foreign_exchange"
+        android:name="com.example.mkbank.app.foreignExchange.ForeignExchangeFragment"
+        android:label="@string/menu_foreign_exchange"
+        tools:layout="@layout/fragment_foreign_exchange" />
+
+    <fragment
+        android:id="@+id/nav_calculator"
+        android:name="com.example.mkbank.app.calculator.CalculatorFragment"
+        android:label="@string/menu_calculator"
+        tools:layout="@layout/fragment_calculator" />
+
+    <fragment
+        android:id="@+id/nav_contact_us"
+        android:name="com.example.mkbank.app.contactUs.ContactUsFragment"
+        android:label="@string/menu_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.mkbank.login.SignInFragment"
+        android:label="sign_in_fragment"
+        tools:layout="@layout/sign_in_fragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.mkbank.login.SignUpFragment"
+        android:label="sign_up_fragment"
+        tools:layout="@layout/sign_up_fragment" />
+</navigation>
